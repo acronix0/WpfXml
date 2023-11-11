@@ -1,0 +1,17 @@
+﻿<Window x:Class="helloapp.MainMenue"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:helloapp"
+        mc:Ignorable="d"
+        Title="MainMenue" Height="450" Width="800">
+    <Grid>
+        <Button Content="Передачи" HorizontalAlignment="Center" Margin="0,55,0,0" VerticalAlignment="Top" Height="67" Width="244" Click="Button_Click_3"/>
+        <Button Content="Реклама" HorizontalAlignment="Center" Margin="0,137,0,0" VerticalAlignment="Top" Height="67" Width="244" Click="Button_Click"/>
+        <Button Content="Заказчики" HorizontalAlignment="Center" Margin="0,217,0,0" VerticalAlignment="Top" Height="67" Width="244" Click="Button_Click_2"/>
+        <Button Content="Агенты" HorizontalAlignment="Center" Margin="0,296,0,0" VerticalAlignment="Top" Height="67" Width="244" Click="Button_Click_1"/>
+        <Label Name="UserLabel" Content="Label" Margin="0,0,757,408"/>
+
+    </Grid>
+</Window>
