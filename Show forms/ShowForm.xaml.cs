@@ -25,7 +25,6 @@ namespace helloapp.Show_forms
         public ShowForm()
         {
             InitializeComponent();
-            XmlDataManager.SaveData("data/Customers.xml", new List<Show>() { new Show() { Name="123",CostPerMinute=1,Rating=5,ShowId = 0} });
 
             entities = XmlDataManager.LoadData<Show>("data/Shows.xml");
 

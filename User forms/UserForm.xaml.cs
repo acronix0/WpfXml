@@ -25,7 +25,7 @@ namespace helloapp.User_forms
         public UserForm()
         {
             InitializeComponent();
-            XmlDataManager.SaveData("data/Customers.xml", new List<User>() { new User() { UserId=1,Login="2",Name="Пользователь",Password = "2" } });
+           
             entities = XmlDataManager.LoadData<User>("data/Users.xml");
 
             dataGrid.ItemsSource = entities;

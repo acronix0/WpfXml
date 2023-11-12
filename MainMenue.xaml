@@ -5,13 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:helloapp"
         mc:Ignorable="d"
-        Title="MainMenue" Height="450" Width="800">
-    <Grid>
-        <Button Content="Передачи" HorizontalAlignment="Center" Margin="0,55,0,0" VerticalAlignment="Top" Height="67" Width="244" Click="Button_Click_3"/>
-        <Button Content="Реклама" HorizontalAlignment="Center" Margin="0,137,0,0" VerticalAlignment="Top" Height="67" Width="244" Click="Button_Click"/>
-        <Button Content="Заказчики" HorizontalAlignment="Center" Margin="0,217,0,0" VerticalAlignment="Top" Height="67" Width="244" Click="Button_Click_2"/>
-        <Button Content="Агенты" HorizontalAlignment="Center" Margin="0,296,0,0" VerticalAlignment="Top" Height="67" Width="244" Click="Button_Click_1"/>
-        <Label Name="UserLabel" Content="Label" Margin="0,0,757,408"/>
+        Title="Main Menu" Height="414" Width="453">
+    <Window.Resources>
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#E0A9AF"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Height" Value="67"/>
+            <Setter Property="Width" Value="244"/>
+        </Style>
+        <Style x:Key="LabelStyle" TargetType="Label">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Margin" Value="10,10,0,0"/>
+        </Style>
+    </Window.Resources>
 
+    <Grid>
+        <Button Content="Передачи" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,55,0,0" Click="Button_Click_3" Style="{StaticResource ButtonStyle}"/>
+        <Button Content="Реклама" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,137,0,0" Click="Button_Click" Style="{StaticResource ButtonStyle}"/>
+        <Button Content="Заказчики" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,217,0,0" Click="Button_Click_2" Style="{StaticResource ButtonStyle}"/>
+        <Button Content="Агенты" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,296,0,0" Click="Button_Click_1" Style="{StaticResource ButtonStyle}"/>
+        <Label Content="User: [Username]" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" Name="UserLabel" Style="{StaticResource LabelStyle}"/>
     </Grid>
 </Window>

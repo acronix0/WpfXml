@@ -5,17 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:helloapp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="271" Width="300">
-    <Grid Margin="0,0,0,-1">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="43*"/>
-            <ColumnDefinition Width="7*"/>
-        </Grid.ColumnDefinitions>
-        <Button Content="Вход" FontSize="13"
-                Click="Button_Click" Margin="96,169,42,48" />
-        <TextBox HorizontalAlignment="Left" Name="loginBox" Margin="96,85,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Name="passwordBox" Margin="96,132,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Логин" HorizontalAlignment="Left" Margin="96,59,0,0" VerticalAlignment="Top"/>
-        <Label Content="Пароль" HorizontalAlignment="Left" Margin="96,106,0,0" VerticalAlignment="Top"/>
+        Title="Вход в систему" Height="320" Width="300">
+    <Window.Resources>
+        <Style x:Key="LabelStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="Black"/>
+        </Style>
+        <Style x:Key="TextBoxStyle" TargetType="TextBox">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="0,10,0,0"/>
+            <Setter Property="Background" Value="#FFFCF6"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Width" Value="120"/>
+        </Style>
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Background" Value="#E0A9AF"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Margin" Value="96,169,42,48"/>
+            <Setter Property="Padding" Value="10,5"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Button Content="Вход" Style="{StaticResource ButtonStyle}"
+                Click="Button_Click" Margin="96,169,84,67" />
+        <TextBox Name="loginBox" Style="{StaticResource TextBoxStyle}" Margin="96,85,0,0"/>
+        <TextBox Name="passwordBox" Style="{StaticResource TextBoxStyle}" Margin="96,133,0,0"/>
+        <Label Content="Логин" HorizontalAlignment="Left" Margin="96,59,0,0" Style="{StaticResource LabelStyle}"/>
+        <Label Content="Пароль" HorizontalAlignment="Left" Margin="96,106,0,0" Style="{StaticResource LabelStyle}"/>
     </Grid>
 </Window>

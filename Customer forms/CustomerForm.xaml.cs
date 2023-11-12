@@ -25,7 +25,6 @@ namespace helloapp.Customer_forms
         public CustomerForm()
         {
             InitializeComponent();
-
             entities = XmlDataManager.LoadData<Customer>("data/Customers.xml");
 
             dataGrid.ItemsSource = entities;

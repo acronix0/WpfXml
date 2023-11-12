@@ -30,14 +30,15 @@ namespace helloapp.Show_forms
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            // Поскольку ShowId обычно генерируется автоматически, здесь нет необходимости валидировать этот параметр
             if (double.TryParse(RatingTextBox.Text, out double rating) &&
+                int.TryParse(ShowIdTextBox.Text, out int id) &&
                 decimal.TryParse(CostPerMinuteTextBox.Text, out decimal costPerMinute) &&
                 !string.IsNullOrWhiteSpace(NameTextBox.Text))
             {
                 NewShow = new Show
                 {
-                    // ShowId не включен, так как предполагается его автоматическая генерация
+                    
+                    ShowId = id,
                     Name = NameTextBox.Text,
                     Rating = rating,
                     CostPerMinute = costPerMinute
@@ -50,6 +51,11 @@ namespace helloapp.Show_forms
             {
                 MessageBox.Show("Пожалуйста, проверьте введенные данные и попробуйте снова.", "Некорректные данные", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void ShowIdTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 
